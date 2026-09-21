@@ -1,0 +1,29 @@
+{
+  "card": "card-5-watcher",
+  "title": "Watcher Agent",
+  "intendedEditFiles": [
+    "src/services/materiality.ts",
+    "src/agent/state.ts",
+    "src/agent/agent.ts"
+  ],
+  "sharedServices": [
+    {
+      "id": "mock-pages",
+      "name": "Instructor-operated deterministic mock pages",
+      "purpose": "Provides the rendered market-cycle target with stable material markers and cosmetic timestamp churn.",
+      "publicConfiguration": ["MOCK_PAGE_BASE_URL", "WATCH_PATH"],
+      "secretConfiguration": [],
+      "attendeeManaged": false
+    },
+    {
+      "id": "mail-router",
+      "name": "Optional instructor-operated mail router",
+      "purpose": "Supports the optional email-notification stretch after instructor enablement.",
+      "publicConfiguration": [],
+      "secretConfiguration": [],
+      "attendeeManaged": false,
+      "optional": true
+    }
+  ],
+  "sourceCommit": "development"
+}
